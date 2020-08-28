@@ -15,7 +15,7 @@ namespace PlanYourHeist
                 Console.WriteLine("Menu");
                 Console.WriteLine(" 1) Add a Team Member");
                 Console.WriteLine(" 2) Print out Team Members");
-                Console.WriteLine(" 3) Skill Level");
+                Console.WriteLine(" 3) Run Scenario");
                 Console.WriteLine(" 4) Exit");
                 Console.WriteLine();
                 Console.Write("> ");
@@ -50,6 +50,9 @@ namespace PlanYourHeist
                         myTeam.ListTeamMembers();
                         break;
                     case "3":
+                        Console.WriteLine("How many have you run through this");
+                        string RunScenario = Console.ReadLine();
+
                         //if skillLevelSum is greater than difficulty level will be successful, otherwise will fail;
                         int skillLevelSum = myTeam.SumSkillLevel();
                         Console.WriteLine($"Team's Skill Level: {skillLevelSum}");
