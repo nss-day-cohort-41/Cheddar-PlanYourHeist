@@ -7,7 +7,8 @@ namespace PlanYourHeist
         static void Main(string[] args)
         {
             Team myTeam = new Team();
-            int difficultyLevel = 100;
+            int luckValue = new Random().Next(-10, 11);
+            int difficultyLevel = 100 + luckValue;
 
             while (true)
             {
@@ -51,6 +52,8 @@ namespace PlanYourHeist
                     case "3":
                         //if skillLevelSum is greater than difficulty level will be successful, otherwise will fail;
                         int skillLevelSum = myTeam.SumSkillLevel();
+                        Console.WriteLine($"Team's Skill Level: {skillLevelSum}");
+                        Console.WriteLine($"Bank's difficulty Level: {difficultyLevel}");
                         if (skillLevelSum >= difficultyLevel)
                         {
                             Console.WriteLine("You will succeed in your heist!");
